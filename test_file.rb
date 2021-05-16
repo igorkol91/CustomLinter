@@ -1,3 +1,5 @@
+# rubocop: disable Lint/Syntax
+
 require_relative '../lib/file_reader.rb'
 require_relative '../lib/linter_errors.rb'
 
@@ -15,3 +17,4 @@ class Rogavec
       end
     end
 end
+# rubocop: enable Lint/Syntax

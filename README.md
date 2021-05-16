@@ -13,50 +13,50 @@ The custom Ruby linter contains the following methods
 
 LINE LENGTH
 
-Bad Code
+Bad Code   return
 ![Linters](./assets/line_length_badcode.png)
 
-Good Code
+Good Code   return
 ![Linters](./assets/line_length_goodcode.png)
 
-MISSING ENDS
+MISSING ENDS   return
 
-Bad Code
+Bad Code   return
 ![Linters](./assets/missing_ends_badcode.png)
 
-Good Code
+Good Code   return
 ![Linters](./assets/missing_ends_goodcode.png)
 
-IDENTATION
+IDENTATION   return
 
-Bad Code
+Bad Code   return
 ![Linters](./assets/identation_badcode.png)
 
-Good Code
+Good Code   return
 ![Linters](./assets/identation_goodcode.png)
 
-TRAILING WHITESPACE
+TRAILING WHITESPACE   return
 
-Bad Code
+Bad Code   return
 ![Linters](./assets/trailing_whitespace_badcode.png)
 
-Good Code
+Good Code   return
 ![Linters](./assets/trailing_whitespace_goodcode.png)
 
-MISSING ENDLINE
+MISSING ENDLINE   return
 
-Bad Code
+Bad Code   return
 ![Linters](./assets/missing_endline_badcode.png)
 
-Good Code
+Good Code   return
 ![Linters](./assets/missing_endline_goodcode.png)
 
-BRACKETS WHITE-SPACE
+BRACKETS WHITE-SPACE   return
 
-Bad Code
+Bad Code   return
 ![Linters](./assets/brackets_whitespace_badcode.png)
 
-Good Code
+Good Code   return
 ![Linters](./assets/brackets_whitespace_goodcode.png)
 
 

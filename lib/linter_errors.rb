@@ -54,7 +54,7 @@ class Linter < ParseFile
         next_ident -= 2
         current_ident = next_ident
       end
-      splited_line.each { |x| x == ' ' ? got_ident += 1 : break }
+      splited_line.each { |n| n == ' ' ? got_ident += 1 : break }
       if current_ident != got_ident
         puts "Wrong identantation on line #{line_num + 1} expected #{current_ident} got #{got_ident}" unless current_ident.negative?
         error4 = "Wrong identantation on line #{line_num + 1} expected #{current_ident} got #{got_ident}"
