@@ -11,7 +11,7 @@ class Rogavec
         1.times doiuhsadoiuashdoiahsdoiuhasoiudhasiuodhioaushdiouashdiuoashdiouahsdiouhasioudhasiuodhiuaoshdoiuahsdoiuashdouiahsudiohasouidhasiodhoaiushdoiuash
           {asd }
           [1, 2, 3]
-         end  
+        end 
       end
     end
-  end
+end

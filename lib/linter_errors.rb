@@ -1,39 +1,40 @@
-#lib/linter_errors_rb
+# rubocop: disable Layout/LineLength, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity
+# lib/linter_errors_rb
 
 require_relative '../lib/file_reader.rb'
 class Linter < ParseFile
   @@keywords = ['def', 'class', 'if', 'module', 'while', 'until', 'until', 'for', 'switch', 'times']
   @@endline = 'end'
   def check_errors
-    line_length()
-    missing_ends()
-    identation()
-    trailing_whitespace()
-    missing_endline()
-    brackets_whitespace()
+    line_length
+    missing_ends
+    identation
+    trailing_whitespace
+    missing_endline
+    brackets_whitespace
   end
 
-def missing_ends
-  count = 0
-  test_count = 0
-  take_line = 0
-  error_line = 0
-  for x in @file_data
-    for y in @@keywords
-        count +=1 if x.include?(y)
+  def missing_ends
+    count = 0
+    test_count = 0
+    take_line = 0
+    error_line = 0
+    for x in @file_data
+      for y in @@keywords
+        count += 1 if x.include?(y)
+      end
     end
-  end
-  @file_data.each { |x| test_count +=1 if x.match(@@endline)}
-  for x in @file_data
-  take_line+=1
-  error_line = take_line if x.match(@@endline)
-  end
-  if count > test_count
-    puts "Missing end on line #{error_line}"
-    error5 = "Missing end on line #{error_line}"
-  end
-  puts "Unneseseary end on line #{error_line}" if count < test_count
-  return error5
+    @file_data.each { |n| test_count +=1 if n.match(@@endline) }
+    for x in @file_data
+      take_line += 1
+      error_line = take_line if x.match(@@endline)
+    end
+    if count > test_count
+      puts "Missing end on line #{error_line}"
+      error5 = "Missing end on line #{error_line}"
+    end
+    puts "Unneseseary end on line #{error_line}" if count < test_count
+    error5
   end
 
   def identation
@@ -56,14 +57,14 @@ def missing_ends
       end
       splited_line.each {|x| x == ' ' ? got_ident += 1 : break}
       if current_ident != got_ident
-        puts "Wrong identantation on line #{line_num + 1} expected #{current_ident} got #{got_ident}" unless current_ident < 0
+        puts "Wrong identantation on line #{line_num + 1} expected #{current_ident} got #{got_ident}" unless current_ident.negative?
         error4 = "Wrong identantation on line #{line_num + 1} expected #{current_ident} got #{got_ident}"
       end
       current_ident = next_ident
       got_ident = 0
       line_num += 1
     end
-    return error4
+    error4
   end
 
   def trailing_whitespace
@@ -71,16 +72,20 @@ def missing_ends
     for x in @file_data
       line_num += 1
       splited_line = x.split('')
-      if splited_line.reverse[1] == " "
+      if splited_line.reverse[1] == ' '
         puts "Trailing white-space on line #{line_num}"
         error3 = "Trailing white-space on line #{line_num}"
       end
     end
-    return error3
+    error3
   end
 
   def missing_endline
-    puts 'Missing final endline' unless @file_data.last.match(/\s/)
+    unless @file_data.last.match(/\s/)
+      puts 'Missing final endline' 
+      error6 = 'Missing final endline'
+    end
+    error6
   end
 
   def brackets_whitespace
@@ -90,19 +95,18 @@ def missing_ends
       line_num += 1
       index = 0
       while index < splited_line.length
-        if splited_line[index] == '{' and splited_line[index+1] != ' '
+        if splited_line[index] == '{' and splited_line[index + 1] != ' '
           puts "Missing white-space after { on line #{line_num}"
           error2 = "Missing white-space after { on line #{line_num}"
         end
-        if splited_line[index] == '}' and splited_line[index-1] != ' '
+        if splited_line[index] == '}' and splited_line[index - 1] != ' '
           puts "Missing white-space before } on line #{line_num}"
         end
-      if splited_line[index] == ',' and splited_line[index+1] != ' '
-        puts "Missing white-space after , on line #{line_num}"
+        if splited_line[index] == ',' and splited_line[index + 1] != ' '
+          puts "Missing white-space after , on line #{line_num}"
+        end
+        index += 1
       end
-      index += 1
-    end
-    index = 0
     end
     error2
   end
@@ -119,3 +123,4 @@ def missing_ends
     error1
   end
 end
+# rubocop: enable Layout/LineLength, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity
