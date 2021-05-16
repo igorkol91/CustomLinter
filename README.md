@@ -3,6 +3,7 @@
 > The idea of this project is to build a custom set of methods that whould check a file and output messages
 for any error's found in there.
 The custom Ruby linter contains the following methods
+
 1. line_length => Checks if the line contains more than 80 characters 
 2. missing_ends => Checks if there are missing ends or if there are extra unneeded ends
 3. identation => Checks the identation on every line and compares it with expected identation
@@ -15,7 +16,7 @@ LINE LENGTH
 Bad Code
 ![Linters](./assets/line_length_badcode.png)
 
-Good Code
+Good Code /n
 ![Linters](./assets/line_length_goodcode.png)
 
 MISSING ENDS
