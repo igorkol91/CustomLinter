@@ -16,7 +16,7 @@ LINE LENGTH
 Bad Code
 ![Linters](./assets/line_length_badcode.png)
 
-Good Code /n
+Good Code
 ![Linters](./assets/line_length_goodcode.png)
 
 MISSING ENDS
