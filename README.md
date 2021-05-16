@@ -11,52 +11,52 @@ The custom Ruby linter contains the following methods
 5. missing_endline => Checks if there is one extra blank endline in the end of the file
 6. brackets_whitespace => Checks for white-space after brackets and comas
 
-LINE LENGTH
+LINE LENGTH\
 
-Bad Code   return
+Bad Code\
 ![Linters](./assets/line_length_badcode.png)
 
-Good Code   return
+Good Code\
 ![Linters](./assets/line_length_goodcode.png)
 
-MISSING ENDS   return
+MISSING ENDS\
 
-Bad Code   return
+Bad Code\
 ![Linters](./assets/missing_ends_badcode.png)
 
-Good Code   return
+Good Code\
 ![Linters](./assets/missing_ends_goodcode.png)
 
-IDENTATION   return
+IDENTATION\
 
-Bad Code   return
+Bad Code\
 ![Linters](./assets/identation_badcode.png)
 
-Good Code   return
+Good Code\
 ![Linters](./assets/identation_goodcode.png)
 
-TRAILING WHITESPACE   return
+TRAILING WHITESPACE\
 
-Bad Code   return
+Bad Code\
 ![Linters](./assets/trailing_whitespace_badcode.png)
 
-Good Code   return
+Good Code\
 ![Linters](./assets/trailing_whitespace_goodcode.png)
 
-MISSING ENDLINE   return
+MISSING ENDLINE\
 
-Bad Code   return
+Bad Code\
 ![Linters](./assets/missing_endline_badcode.png)
 
-Good Code   return
+Good Code\
 ![Linters](./assets/missing_endline_goodcode.png)
 
-BRACKETS WHITE-SPACE   return
+BRACKETS WHITE-SPACE\
 
-Bad Code   return
+Bad Code\
 ![Linters](./assets/brackets_whitespace_badcode.png)
 
-Good Code   return
+Good Code\
 ![Linters](./assets/brackets_whitespace_goodcode.png)
 
 
