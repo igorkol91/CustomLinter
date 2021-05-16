@@ -13,50 +13,50 @@ The custom Ruby linter contains the following methods
 LINE LENGTH
 
 Bad Code
-![Linters](./assets/line_length_badcode.PNG)
+![Linters](./assets/line_length_badcode.png)
 
 Good Code
-![Linters](./assets/line_length_goodcode.PNG)
+![Linters](./assets/line_length_goodcode.png)
 
 MISSING ENDS
 
 Bad Code
-![Linters](./assets/missing_ends_badcode.PNG)
+![Linters](./assets/missing_ends_badcode.png)
 
 Good Code
-![Linters](./assets/missing_ends_goodcode.PNG)
+![Linters](./assets/missing_ends_goodcode.png)
 
 IDENTATION
 
 Bad Code
-![Linters](./assets/identation_badcode.PNG)
+![Linters](./assets/identation_badcode.png)
 
 Good Code
-![Linters](./assets/identation_goodcode.PNG)
+![Linters](./assets/identation_goodcode.png)
 
 TRAILING WHITESPACE
 
 Bad Code
-![Linters](./assets/trailing_whitespace_badcode.PNG)
+![Linters](./assets/trailing_whitespace_badcode.png)
 
 Good Code
-![Linters](./assets/trailing_whitespace_goodcode.PNG)
+![Linters](./assets/trailing_whitespace_goodcode.png)
 
 MISSING ENDLINE
 
 Bad Code
-![Linters](./assets/missing_endline_badcode.PNG)
+![Linters](./assets/missing_endline_badcode.png)
 
 Good Code
-![Linters](./assets/missing_endline_goodcode.PNG)
+![Linters](./assets/missing_endline_goodcode.png)
 
 BRACKETS WHITE-SPACE
 
 Bad Code
-![Linters](./assets/brackets_whitespace_badcode.PNG)
+![Linters](./assets/brackets_whitespace_badcode.png)
 
 Good Code
-![Linters](./assets/brackets_whitespace_goodcode.PNG)
+![Linters](./assets/brackets_whitespace_goodcode.png)
 
 
 
