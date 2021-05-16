@@ -1,9 +1,9 @@
-# rubocop: disable Layout/LineLength, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity
+# rubocop: disable Layout/LineLength, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity, Style/ClassVars
 # lib/linter_errors_rb
 
-require_relative '../lib/file_reader.rb'
+require_relative '../lib/file_reader'
 class Linter < ParseFile
-  @@keywords = ['def', 'class', 'if', 'module', 'while', 'until', 'until', 'for', 'switch', 'times']
+  @@keywords = %w[def class if module while until until for switch times]
   @@endline = 'end'
   def check_errors
     line_length
@@ -24,7 +24,7 @@ class Linter < ParseFile
         count += 1 if x.include?(y)
       end
     end
-    @file_data.each { |n| test_count +=1 if n.match(@@endline) }
+    @file_data.each { |n| test_count += 1 if n.match(@@endline) }
     for x in @file_data
       take_line += 1
       error_line = take_line if x.match(@@endline)
@@ -50,12 +50,11 @@ class Linter < ParseFile
           next
         end
       end
-      splited_line.each {|x| variable_checker = false if x != ' ' or x != 'e' or x != 'n' or x != 'd'}
       if x.include?(@@endline)
-          next_ident -= 2
-          current_ident = next_ident
+        next_ident -= 2
+        current_ident = next_ident
       end
-      splited_line.each {|x| x == ' ' ? got_ident += 1 : break}
+      splited_line.each { |x| x == ' ' ? got_ident += 1 : break }
       if current_ident != got_ident
         puts "Wrong identantation on line #{line_num + 1} expected #{current_ident} got #{got_ident}" unless current_ident.negative?
         error4 = "Wrong identantation on line #{line_num + 1} expected #{current_ident} got #{got_ident}"
@@ -82,7 +81,7 @@ class Linter < ParseFile
 
   def missing_endline
     unless @file_data.last.match(/\s/)
-      puts 'Missing final endline' 
+      puts 'Missing final endline'
       error6 = 'Missing final endline'
     end
     error6
@@ -123,4 +122,4 @@ class Linter < ParseFile
     error1
   end
 end
-# rubocop: enable Layout/LineLength, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity
+# rubocop: enable Layout/LineLength, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity, Style/ClassVars
