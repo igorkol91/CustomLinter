@@ -5,7 +5,7 @@ require_relative '../lib/linter_errors.rb'
 
 @getFile = Linter.new('../lib/test_file.rb')
 @getFile.check
-
+#class
 class Rogavec
   def reads
     for

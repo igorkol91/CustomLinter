@@ -69,7 +69,7 @@ class Linter < ParseFile
 
   def trailing_whitespace
     line_num = 0
-    for x in @file_data
+    for x in file_data
       line_num += 1
       splited_line = x.split('')
       if splited_line.reverse[1] == ' '

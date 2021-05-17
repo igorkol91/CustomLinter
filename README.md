@@ -67,13 +67,15 @@ Good Code\
 
 ## Getting Started
 
-1. Clone the project
+1. Open https://github.com/igorkol91/CustomLinter
+
+1. In a new folder open terminal and input git clone git@github.com:igorkol91/CustomLinter.git
    
 2. On your terminal, cd into the app directory
 
 3. Run "ruby main.rb"
 
-4. @filename = 'path to the file you want to be checked'
+4. filename = 'path to the file you want to be checked'
 
 ### Prerequisites
 

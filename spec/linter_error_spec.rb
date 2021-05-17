@@ -24,7 +24,7 @@ describe Linter do
 
   describe '#identation' do
     it 'countes identation that we have and compares it with expected identation' do
-      expect(test_linter.identation).to eql('Wrong identantation on line 20 expected 2 got 0')
+      expect(test_linter.identation).to eql('Wrong identation on line 20 expected 2 got 0')
     end
   end
 
