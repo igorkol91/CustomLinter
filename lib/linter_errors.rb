@@ -6,7 +6,7 @@ class Linter < ParseFile
   attr_reader :file_data
 
   Keywords = %w[def class if module while until until for switch times].freeze
-  Endline = %w[end].freeze
+  Endline = 'end'
   def check_errors
     line_length
     missing_ends
