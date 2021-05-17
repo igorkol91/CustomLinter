@@ -1,11 +1,12 @@
-# rubocop: disable Layout/LineLength, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity
+# rubocop: disable Layout/LineLength, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity, Naming/ConstantName
 # lib/linter_errors_rb
 
 require_relative '../lib/file_reader'
 class Linter < ParseFile
   attr_reader :file_data
-  Keywords = %w[def class if module while until until for switch times]
-  Endline = 'end'
+
+  Keywords = %w[def class if module while until until for switch times].freeze
+  Endline = %w[end].freeze
   def check_errors
     line_length
     missing_ends
@@ -22,6 +23,7 @@ class Linter < ParseFile
     error_line = 0
     for x in file_data
       next if x.include?('#')
+
       for y in Keywords
         count += 1 if x.include?(y)
       end
@@ -48,6 +50,7 @@ class Linter < ParseFile
       splited_line = x.split('')
       line_num += 1
       next if x.include?('#')
+
       for y in Keywords
         if x.include?(y)
           next_ident += 2
@@ -125,4 +128,4 @@ class Linter < ParseFile
     error1
   end
 end
-# rubocop: enable Layout/LineLength, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity
+# rubocop: enable Layout/LineLength, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity, Naming/ConstantName
