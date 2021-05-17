@@ -71,7 +71,7 @@ Good Code\
    
 2. On your terminal, cd into the app directory
 
-3. Run "irb -r main.rb"
+3. Run "ruby main.rb"
 
 4. @filename = 'path to the file you want to be checked'
 
