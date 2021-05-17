@@ -21,6 +21,7 @@ class Linter < ParseFile
     take_line = 0
     error_line = 0
     for x in file_data
+      next if x.include?('#')
       for y in Keywords
         count += 1 if x.include?(y)
       end
@@ -45,6 +46,8 @@ class Linter < ParseFile
     got_ident = 0
     for x in file_data
       splited_line = x.split('')
+      line_num += 1
+      next if x.include?('#')
       for y in Keywords
         if x.include?(y)
           next_ident += 2
@@ -62,7 +65,6 @@ class Linter < ParseFile
       end
       current_ident = next_ident
       got_ident = 0
-      line_num += 1
     end
     error4
   end
