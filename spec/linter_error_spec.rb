@@ -3,7 +3,7 @@
 require_relative '../lib/linter_errors'
 
 describe Linter do
-  let(:test_linter) { Linter.new('./test_file.rb') }
+  let(:test_linter) { Linter.new('./spec/test_file.rb') }
   describe '#line_length' do
     it 'counts line width and returns an arror if line is more than 80 chars long' do
       expect(test_linter.line_length).to eql('Line 13 too long 160/80')

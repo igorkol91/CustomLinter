@@ -69,13 +69,13 @@ Good Code\
 
 1. Open https://github.com/igorkol91/CustomLinter
 
-1. In a new folder open terminal and input git clone git@github.com:igorkol91/CustomLinter.git
+2. In a new folder open terminal and input $git clone git@github.com:igorkol91/CustomLinter.git
    
-2. On your terminal, cd into the app directory
+3. On your terminal, cd into the app directory
 
-3. Run "ruby main.rb"
+4. Input $ruby bin/main.rb
 
-4. filename = 'path to the file you want to be checked'
+5. filename = 'path to the file you want to be checked'
 
 ### Prerequisites
 
@@ -85,7 +85,7 @@ For local usage, ensure you have ruby installed and environment variable configu
 
 1. Run 'gem install rspec'
 
-2. Navigate to the project directory. Type rspec in the console
+2. Navigate to the project directory. In the console input $rspec
 
 ## Authors
 
