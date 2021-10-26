@@ -1,4 +1,4 @@
-# CustumRubyLinter
+# CustumRubyLinter   
 
 > The idea of this project is to build a custom set of methods that whould check a file and output messages
 for any error's found in there.
