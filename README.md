@@ -11,7 +11,7 @@ The custom Ruby linter contains the following methods
 5. missing_endline => Checks if there is one extra blank endline in the end of the file
 6. brackets_whitespace => Checks for white-space after brackets and comas
 
-LINE LENGTH\
+LINE LENGTH\    
 
 Bad Code\
 ![Linters](./assets/line_length_badcode.png)
